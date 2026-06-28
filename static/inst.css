@@ -1,0 +1,53 @@
+body {
+  margin: 0;
+  padding: 0;
+  background-image: url(/static/res.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.container {
+  width: 120vh;
+  height: auto;
+  margin: 10% auto;
+  padding: 20px;
+}
+
+h1 {
+  text-align: center;
+  color: #333;
+}
+
+.subtitle {
+  text-align: center;
+  font-size: 18px;
+  color: #444;
+}
+
+li {
+  line-height: 2.5;
+  font-size: larger;
+  color: blue;
+}
+
+.form-footer {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.btn {
+  display: inline-block;
+  padding: 10px 20px;
+  background: brown;
+  color: beige;
+  font-weight: 800;
+  font-size: large;
+  border-radius: 5px;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  color: red;
+  background: #f1c1c1;
+}

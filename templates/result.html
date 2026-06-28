@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Exam Result</title>
+    <link rel="stylesheet" href="/static/exam.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h2>Your Exam Result</h2>
+      <p>
+        You scored <strong>{{ score }}</strong> out of
+        <strong>{{ total }}</strong>
+      </p>
+      <!-- <div class="form-footer">
+        <a class="btn" href="{{ url_for('instruction') }}">Back to Home</a>
+        <a
+          class="btn"
+          href="{{ url_for('logout') }}"
+          style="background: #d23f3f; margin-left: 8px"
+          >Logout</a
+        >
+      </div> -->
+    </div>
+  </body>
+</html>

@@ -1,0 +1,194 @@
+/* --- Reset & theme --- */
+* { box-sizing: border-box; }
+:root {
+  --bg1: #461874;
+  --bg2: #0f1e37;
+  --card-bg: #453c3c;
+  --text: hsl(336, 71%, 52%);
+  --muted: #666;
+  --primary: #2575fc;
+  --primary-hover: #1a5edb;
+  --ring: rgba(37, 117, 252, 0.35);
+  --success: #1f9d55;
+  --error: #d23f3f;
+  --info: #0d6efd;
+  --shadow: 0 10px 25px rgba(197, 60, 60, 0.15);
+  --radius: 14px;
+}
+
+/* Full-page center */
+html, body {
+  height: 100%;
+}
+body {
+  margin: 0;
+  color: var(--text);
+  background: linear-gradient(120deg, var(--bg1), var(--bg2));
+  display: grid;
+  place-items: center;
+  padding: 20px;
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+}
+
+/* Card containers (support both class names) */
+.container,
+.form-container,
+.dashboard {
+  width: 100%;
+  max-width: 420px;
+  background: var(--card-bg);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: 28px 24px;
+}
+
+/* Dashboard can be wider if you like */
+.dashboard {
+  max-width: 640px;
+}
+
+/* Headings */
+h1, h2 {
+  margin: 0 0 14px 0;
+  font-weight: 700;
+  letter-spacing: 0.2px;
+  color: var(--text);
+}
+p.subtitle {
+  margin: -6px 0 18px;
+  color: var(--muted);
+  font-size: 0.95rem;
+}
+
+/* Flash messages */
+.flash,
+.success, .error, .info {
+  padding: 10px 12px;
+  border-radius: 10px;
+  margin: 8px 0 12px;
+  font-weight: 600;
+  text-align: center;
+}
+.flash.success, .success {
+  background: rgba(31, 157, 85, 0.1);
+  color: var(--success);
+  border: 1px solid rgba(31,157,85,0.25);
+}
+.flash.error, .error {
+  background: rgba(210, 63, 63, 0.12);
+  color: var(--error);
+  border: 1px solid rgba(210,63,63,0.28);
+}
+.flash.info, .info {
+  background: rgba(13, 110, 253, 0.1);
+  color: var(--info);
+  border: 1px solid rgba(13,110,253,0.25);
+}
+
+/* Form layout (supports both .field and .form-group) */
+form {
+  display: grid;
+  gap: 14px;
+  margin-top: 8px;
+}
+.field, .form-group {
+  display: grid;
+  gap: 6px;
+}
+
+/* Labels */
+label {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--text);
+}
+
+/* Inputs */
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+  width: 100%;
+  padding: 12px 14px;
+  border: 1px solid #d9d9e3;
+  border-radius: 10px;
+  font-size: 0.98rem;
+  outline: none;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
+  background: #fff;
+}
+
+input::placeholder {
+  color: #9aa0a6;
+}
+
+input:focus {
+  border-color: var(--primary);
+  box-shadow: 0 0 0 4px var(--ring);
+}
+
+/* Buttons */
+button,
+.btn {
+  width: 100%;
+  padding: 12px 14px;
+  border: none;
+  border-radius: 10px;
+  background: var(--primary);
+  color: #fff;
+  font-size: 1rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: transform 0.04s ease, background 0.2s ease, box-shadow 0.2s ease;
+  box-shadow: 0 8px 16px rgba(37, 117, 252, 0.25);
+}
+button:hover,
+.btn:hover {
+  background: var(--primary-hover);
+}
+button:active,
+.btn:active {
+  transform: translateY(1px);
+}
+
+/* Footer / links */
+.form-footer, .links {
+  text-align: center;
+  margin-top: 12px;
+  font-size: 0.95rem;
+}
+a {
+  color: var(--primary);
+  text-decoration: none;
+  font-weight: 600;
+}
+a:hover {
+  text-decoration: underline;
+}
+
+/* Dashboard content */
+.dashboard h2 { margin-bottom: 8px; }
+.dashboard p { color: var(--muted); }
+.dashboard .actions {
+  margin-top: 16px;
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+.dashboard .actions a {
+  display: inline-block;
+  padding: 10px 14px;
+  border-radius: 10px;
+  background: var(--primary);
+  color: #fff;
+  box-shadow: 0 8px 16px rgba(37, 117, 252, 0.25);
+}
+.dashboard .actions a:hover {
+  background: var(--primary-hover);
+}
+
+/* Responsive tweaks */
+@media (max-width: 480px) {
+  .container, .form-container, .dashboard {
+    padding: 22px 18px;
+  }
+}
